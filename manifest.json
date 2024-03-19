@@ -4,6 +4,7 @@
   "version": "1.0",
   "description": "Copies link and PR name",
   "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://github.com/*/pull/*"],
   "action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
