@@ -7,7 +7,7 @@ takes the PR url and pr title and copies them to the clipboard in the format:
 
 ## Installation
 
-To add the plugin to chrome, open chrome:// click `load unpacked` and select the project dir.
+To add the plugin to chrome, open chrome://extensions click `load unpacked` and select the project dir.
 
 ## Use
 
