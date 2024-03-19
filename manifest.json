@@ -3,12 +3,6 @@
   "name": "Github PR Link Extension",
   "version": "1.0",
   "description": "Copies link and PR name",
-  "content_scripts":[
-    {
-      "matches" : ["https://github.com/*/pull/*"],
-      "js" : ["content.js"]
-    }
-  ],
   "permissions": ["activeTab", "scripting"],
   "action": {
     "default_icon": "icon.png",
