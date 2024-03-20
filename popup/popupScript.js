@@ -36,7 +36,6 @@ async function copyPrDetailsToClipboard() {
 
 function checkSupported(url) {
   const validRegex = /https:\/\/github.com\/.*\/pull\/\d+/;
-  console.log(url);
   if (!validRegex.test(url)) {
     alert(unsupportedAlert);
     return false;
