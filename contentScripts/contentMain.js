@@ -24,7 +24,6 @@ function makeTitleClickable() {
     };
   }
 }
-// makeTitleClickable()
 chrome.runtime.onMessage.addListener(() => {
   makeTitleClickable()
 });
