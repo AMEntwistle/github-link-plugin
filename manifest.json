@@ -15,7 +15,7 @@
         "contentScripts/contentMain.js"
       ],
       "matches": [
-        "https://github.com/*/pull/*"
+        "https://github.com/*"
       ],
       "run_at": "document_start"
     }

@@ -1,9 +1,9 @@
 function makeTitleClickable() {
   const titleClass = 'js-issue-title';
   const prTitle = document.getElementsByClassName(titleClass)[0];
-  let originalPrColour = prTitle.style.color;
 
   if (prTitle) {
+    let originalPrColour = prTitle.style.color;
     prTitle.style.cursor = 'pointer';
     prTitle.onmouseout = () => {
       prTitle.style.color = originalPrColour;
@@ -26,6 +26,8 @@ function makeTitleClickable() {
     };
   }
 }
+console.log('content injected')
+makeTitleClickable()
 chrome.runtime.onMessage.addListener(() => {
   makeTitleClickable()
 });
