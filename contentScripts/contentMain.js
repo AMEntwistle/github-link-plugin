@@ -26,7 +26,6 @@ function makeTitleClickable() {
     };
   }
 }
-console.log('content injected')
 makeTitleClickable()
 chrome.runtime.onMessage.addListener(() => {
   makeTitleClickable()
