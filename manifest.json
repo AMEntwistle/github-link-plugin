@@ -16,7 +16,8 @@
       ],
       "matches": [
         "https://github.com/*/pull/*"
-      ]
+      ],
+      "run_at": "document_start"
     }
   ],
   "background": {

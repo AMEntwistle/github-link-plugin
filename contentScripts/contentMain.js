@@ -7,9 +7,11 @@ function makeTitleClickable() {
     prTitle.style.cursor = 'pointer';
     prTitle.onmouseout = () => {
       prTitle.style.color = originalPrColour;
+      prTitle.style.textDecoration = '';
     };
     prTitle.onmouseover = () => {
       prTitle.style.color = `#0000FF`;
+      prTitle.style.textDecoration = 'underline';
     };
     prTitle.onclick = async () => {
       const url = window.location.href;
