@@ -22,10 +22,24 @@ async function copyPrDetailsToClipboard() {
   }
   const text = await chrome.scripting.executeScript({
     target: {tabId: tab.id},
-    func: () => document.getElementsByClassName(
-        'js-issue-title')[0].textContent,
+    func: (selectors) => {
+      // Try multiple selectors to handle GitHub's changing structure
+      for (const selector of selectors) {
+        const element = document.querySelector(selector);
+        if (element && element.textContent.trim()) {
+          return element.textContent.trim();
+        }
+      }
+
+      return null;
+    },
+    args: [PR_TITLE_SELECTORS]
   });
   const prName = text[0].result;
+  if (!prName) {
+    alert('Could not find PR title. GitHub may have changed their page structure.');
+    return;
+  }
   await navigator.clipboard.writeText(url + ' - ' + prName);
   const originalText = document.getElementById(buttonId).innerHTML;
   document.getElementById(buttonId).innerHTML = 'PR Copied to Clipboard';
