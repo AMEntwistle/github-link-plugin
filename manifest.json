@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Github PR Link Extension",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Copies link and PR name",
   "permissions": ["activeTab", "scripting"],
   "host_permissions": ["https://github.com/*/pull/*"],
@@ -12,12 +12,19 @@
   "content_scripts": [
     {
       "js": [
+        "constants.js",
         "contentScripts/contentMain.js"
       ],
       "matches": [
         "https://github.com/*"
       ],
       "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["constants.js"],
+      "matches": ["<all_urls>"]
     }
   ],
   "background": {
