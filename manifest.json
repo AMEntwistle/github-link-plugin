@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Github PR Link Extension",
-  "version": "1.2",
+  "version": "1.3",
   "description": "Copies link and PR name",
   "permissions": ["activeTab", "scripting"],
   "host_permissions": ["https://github.com/*/pull/*"],
